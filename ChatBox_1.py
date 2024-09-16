@@ -1,16 +1,16 @@
 from tkinter import *
-from customtkinter import *
 import tkinter as tk 
-frame = tk.Frame
-frame.pack(fill="both", expand=True)
-window =Tk()
-window.title('ChatBot')
-window.minsize(height=500,width=500)
-Label1=Label(window,text='ChatBot',fg='pink',font=('cambria,18'),width=18).grid(row=0)
-Label2=Label(window,text='Micro').grid(row=5,column=0)
-Entry1=Entry(window,width=60).grid(row=0,column=2)
-Button=CTkButton(window,width=10,text='Xoa',corner_radius = 32).grid(row=10,column=0)
-mic_button = tk.Button(frame, text="Microphone") 
-mic_button.pack(side="left", padx=6, pady=6) 
+window = Tk ()
+window.title ('ChatBot')
+window.geometry('800x800')
+micro_icon  = PhotoImage(file = 'd:\Thanh_PyThon\mircoicon.png')
+logo_path = PhotoImage(file = 'd:\Thanh_PyThon\logo.png')
+send_icon = PhotoImage(file = 'd:\Thanh_PyThon\sendicon.png')
+title_label = Label(window,text='ChatBot',fg='pink',font=('cambria',50),width = 16).place(x = 50, y = 0)
+entry_histroy = Entry(window,bg ='#FFFF99').place(x = 30,y = 100,height=500,width=700)
+entry_command = Entry(window,bg ='#FFFFCC').place(x = 30,y = 600,height=100,width=500)
+buton_send = Button(window,image=send_icon,bg ='#0066FF',text = 'SEND').place(x = 530, y = 600,height=100,width=100)
+buton_listen = Button(window,image=micro_icon,bg='#00FFFF',text= 'LISTEN').place(x = 630,y = 600,height=100,width=100)
+window.iconphoto(False,logo_path)
 
 window.mainloop()
